@@ -72,6 +72,7 @@ class Trainer:
                 batch_input, batch_target, mask = batch_input.to(device), batch_target.to(device), mask.to(device)
                 optimizer.zero_grad()
                 predictions = self.model(batch_input, mask)
+                print(predictions.size())
 
                 loss = 0
                 for p in predictions:

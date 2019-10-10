@@ -44,7 +44,8 @@ class BatchGenerator(object):
             for i in range(len(classes)):
                 classes[i] = self.actions_dict[content[i]]
             batch_input .append(features[:, ::self.sample_rate])
-            batch_target.append(classes[::self.sample_rate])
+            # batch_target.append(classes[::self.sample_rate])
+            batch_target.append(classes)
 
         length_of_sequences = map(len, batch_target)
         batch_input_tensor = torch.zeros(len(batch_input), np.shape(batch_input[0])[0], max(length_of_sequences), dtype=torch.float)
