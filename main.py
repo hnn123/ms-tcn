@@ -17,7 +17,7 @@ torch.backends.cudnn.deterministic = True
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--action', default='train')
-parser.add_argument('--dataset', default="gtea")
+parser.add_argument('--dataset', default="50salads")
 parser.add_argument('--split', default='1')
 
 args = parser.parse_args()
